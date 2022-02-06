@@ -1,7 +1,7 @@
 # Sistema-de-Acompanhamento-PHP
 
 ## Criando tabela de Usuários:
-
+```
 CREATE TABLE IF NOT EXISTS `usuarios` (
       `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
       `nome` VARCHAR( 50 ) NOT NULL ,
@@ -15,8 +15,9 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
       UNIQUE KEY `usuario` (`usuario`),
       KEY `nivel` (`nivel`)
   ) ENGINE=MyISAM ;
+ ```
 ## Criando tabela de Acompanhamentos:
-
+```
 CREATE TABLE IF NOT EXISTS `acompanhamentos` (
       `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
       `id_usuario_envio` INT(11) NOT NULL ,
@@ -33,12 +34,13 @@ CREATE TABLE IF NOT EXISTS `acompanhamentos` (
       PRIMARY KEY (`id`),
       UNIQUE KEY `id` (`id`)
   ) ENGINE=MyISAM ;
-
+```
 ## Inserindo usuarios na tabela Usuários:
-
+```
 INSERT INTO `usuarios` VALUES (NULL, 'Usuário Teste', 'demo', SHA1( 'demo'), 'usuario@demo.com.br', 1, NOW( ));
 INSERT INTO `usuarios` VALUES (NULL, 'Administrador Teste', 'admin', SHA1('admin' ), 'admin@demo.com.br' 2, 1, NOW( ));
-
+```
 ## Inserindo usuarios na tabela Acompanhamentos:
-
+```
 INSERT INTO `acompanhamentos` VALUES (NULL, 3, 1, NOW( ), NOW( ), 0, 1, 0, 1, 0, "base64/saasfdsadsgawokfewopamfesm", "");
+```
