@@ -57,7 +57,7 @@
                             <td>'.($item['id_usuario_envio'] == $_SESSION['UsuarioID'] ? "Você" : "Indefinido").'</td>
                             <td>'.($item['pedente'] == 0 ? "Pendente" : "Ok").'</td>
                             <td><a href="'.$item['arquivo'].'">Baixar</a></td>
-                            <td>'.($item['resultado'] == "" ? ($_SESSION['UsuarioNivel'] == 1 ? '<a href="./enviarResultado.php?idAcompanhamento='.$item['id'].'">Enviar Resultado</a>' : "Sem resultado") : ($_SESSION['UsuarioNivel'] == 1 ? '<a href="'.$item['resultado'].'">Baixar</a> | <a href="'.$item['resultado'].'">Cancelar</a>' : '<a href="'.$item['resultado'].'">Baixar</a>')).'</td>
+                            <td>'.($item['resultado'] == "" ? ($_SESSION['UsuarioNivel'] == 1 ? '<a href="./enviarResultado.php?idAcompanhamento='.$item['id'].'">Enviar Resultado</a>' : "Sem resultado") : ($_SESSION['UsuarioNivel'] == 1 ? '<a href="./arquives/'.$item['resultado'].'">Baixar</a> | <a href="'.$item['resultado'].'">Cancelar</a>' : '<a href="'.$item['resultado'].'">Baixar</a>')).'</td>
                             </tr>';
                         }
                     ?>

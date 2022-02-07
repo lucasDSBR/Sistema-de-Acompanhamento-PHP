@@ -39,7 +39,7 @@
             <p>Olá, <?php echo $_SESSION['UsuarioNome']; ?>!</p>
         </div>
         <div class="acompanhamento-corpo-corpo">
-            <form enctype="multipart/form-data" action="validUpload.php"  class="formulario"  method='POST'>
+            <form enctype="multipart/form-data" action=<?php echo 'validUpload.php?'.$_SERVER['QUERY_STRING'] ?>  class="formulario"  method='POST'>
                 
                 <div class="formulario-corpo">
                     <h1>Enviar Resultado</h1>
