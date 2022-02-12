@@ -12,6 +12,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
       `data_cadastro` DATETIME NOT NULL,
       `cpf` VARCHAR( 100 ) NOT NULL ,
       `ics` VARCHAR( 100 ) NOT NULL ,
+      `matricula` VARCHAR( 100 ) NOT NULL ,
+      `comprovante` VARCHAR( 100 ) NOT NULL ,
       `finalidade` VARCHAR( 100 ) NOT NULL ,
       PRIMARY KEY (`id`),
       UNIQUE KEY `cpf` (`cpf`),
