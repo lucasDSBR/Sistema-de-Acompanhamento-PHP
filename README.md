@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 CREATE TABLE IF NOT EXISTS `acompanhamentos` (
       `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
       `id_usuario_envio` INT(11) NOT NULL ,
-      `id_usuario_analise` INT(11) NOT NULL ,
+      `id_usuario_analise` INT(11),
       `data_envio` DATETIME NOT NULL ,
       `data_analise` DATETIME,
       `pedente` BIT NOT NULL DEFAULT 1,
@@ -37,6 +37,7 @@ CREATE TABLE IF NOT EXISTS `acompanhamentos` (
       `nomePeriodicoOrEvento` VARCHAR( 200 ),
       `justificativaPedido` VARCHAR( 200 ),
       `paginas` VARCHAR( 100 ),
+      `status` BIT NOT NULL DEFAULT 0,
       `pathArquivo` VARCHAR( 200 ),
       `pathResultado` VARCHAR( 200 ),
       PRIMARY KEY (`id`),
