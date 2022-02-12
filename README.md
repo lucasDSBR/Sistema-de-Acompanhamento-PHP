@@ -41,8 +41,7 @@ CREATE TABLE IF NOT EXISTS `acompanhamentos` (
 ```
 ## Inserindo usuarios na tabela Usuários:
 ```
-INSERT INTO `usuarios` VALUES (NULL, 'Usuário Teste', 'demo', SHA1( 'demo'), 'usuario@demo.com.br', 1, NOW( ));
-INSERT INTO `usuarios` VALUES (NULL, 'Administrador Teste', 'admin', SHA1('admin' ), 'admin@demo.com.br' 2, 1, NOW( ));
+"INSERT INTO usuarios VALUES (NULL, 'Nome', SHA1('senha'), 'email', 'nivel', 'ativo 1 ou 0', NOW( ), 'cpf', 'tipoVinculo', 'matricula', 'tragetoriaComprovante', 'finalidade');";
 ```
 ## Inserindo usuarios na tabela Acompanhamentos:
 ```
